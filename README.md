@@ -82,11 +82,11 @@ In this section, we discuss common issues encountered during the setup and deplo
 
 * Docker Container Failures:
    - **Issue**: Containers fail to start due to missing dependencies.
-   - **Solution**: Ensure all dependencies are installed before running the containers. Use the command \textit{docker logs [container\_id]} to get detailed error messages. 
+   - **Solution**: Ensure all dependencies are installed before running the containers. Use the command `docker logs [container_id]` to get detailed error messages. 
 
 * USRP Connection Problems:
    - **Issue**: USRP device not recognized by the host machine.
-   - **Solution**: Verify the USRP is properly connected and the correct IP address is configured. Use the command \textit{uhd\_find\_devices} to detect connected USRP devices.
+   - **Solution**: Verify the USRP is properly connected and the correct IP address is configured. Use the command `uhd_find_devices` to detect connected USRP devices.
 
 * Network Configuration Errors:
    - **Issue**: No communication between gNB and 5GC.
@@ -98,5 +98,4 @@ In this section, we discuss common issues encountered during the setup and deplo
     
 * Performance Bottlenecks:
    - **Issue**: Suboptimal throughput performance.
-   - **Solution**: Monitor CPU and memory usage to identify bottlenecks. Adjust the configuration parameters such as \textit{nb\_tx}, \textit{nb\_rx}, and \textit{max\_rxgain} to optimize performance.
-   
+   - **Solution**: Monitor CPU and memory usage to identify bottlenecks. Adjust the configuration parameters such as `nb_tx`, `nb_rx`, and `max_rxgain` to optimize performance.
