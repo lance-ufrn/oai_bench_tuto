@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+    oai-gnb:
+        image: oaisoftwarealliance/oai-gnb:v2.0.0 #oai-gnb:latest
+        privileged: true
+        networks:
+            public_net:
+                ipv4_address: 192.168.70.150
+        container_name: oai-gnb
+        environment:
+            USE_ADDITIONAL_OPTIONS: --sa --tune-offset 20000000 --ue-txgain 50 --ue-rxgain 40 --ue-fo-compensation --log_config.global_log_options level,nocolor,time
+
+        volumes:
+            - ../conf/n310PRB162.conf:/opt/oai-gnb/etc/gnb.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-softmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+networks:
+    public_net:
+        driver: bridge
+        name: nric-net
+        external: true
+        ipam:
+            config:
+                - subnet: 192.168.70.128/26
+        driver_opts:
+            com.docker.network.bridge.name: "eth0"
+

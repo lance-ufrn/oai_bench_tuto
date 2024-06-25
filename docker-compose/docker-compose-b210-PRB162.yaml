@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+    oai-gnb:
+        image: oaisoftwarealliance/oai-gnb:2023.w13
+        privileged: true
+        container_name: rfsim5g-oai-gnb
+        entrypoint: /bin/sh -c "/opt/oai-gnb/bin/uhd_images_downloader.py && /opt/oai-gnb/bin/nr-softmodem -O /opt/oai-gnb/etc/gnb.conf --sa -E --log_config.global_log_options level nocolor time"
+        networks:
+            public_net:
+                ipv4_address: 192.168.70.150
+        volumes:
+            - ../conf/b210PRB162.conf:/opt/oai-gnb/etc/gnb.conf
+        healthcheck:
+            test: /bin/bash -c "pgrep nr-softmodem"
+            interval: 10s
+            timeout: 5s
+            retries: 5
+networks:
+    public_net:
+        driver: bridge
+        name: nric-net
+        external: true
+        ipam:
+            config:
+                - subnet: 192.168.70.128/26
+        driver_opts:
+            com.docker.network.bridge.name: "eth0"
