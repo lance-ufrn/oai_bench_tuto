@@ -80,14 +80,11 @@ To stop core services you must use the `core-stop.sh` script.
 
 In this section, we discuss common issues encountered during the setup and deployment phases of the OAI 5G network and provide solutions. 
 
-\begin{enumerate}
-    \item Docker Container Failures:
-    \begin{itemize}
-        \item Issue: Containers fail to start due to missing dependencies.
-        %
-        \item Solution: Ensure all dependencies are installed before running the containers. Use the command \textit{docker logs [container\_id]} to get detailed error messages. 
-    \end{itemize}
-    \item USRP Connection Problems:
+* Docker Container Failures:
+   - **Issue**: Containers fail to start due to missing dependencies.
+   - **Solution**: Ensure all dependencies are installed before running the containers. Use the command \textit{docker logs [container\_id]} to get detailed error messages. 
+
+*USRP Connection Problems:
     \begin{itemize}
         \item Issue: USRP device not recognized by the host machine.
         \item Solution: Verify the USRP is properly connected and the correct IP address is configured. Use the command \textit{uhd\_find\_devices} to detect connected USRP devices.
