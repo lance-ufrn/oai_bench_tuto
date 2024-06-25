@@ -84,25 +84,19 @@ In this section, we discuss common issues encountered during the setup and deplo
    - **Issue**: Containers fail to start due to missing dependencies.
    - **Solution**: Ensure all dependencies are installed before running the containers. Use the command \textit{docker logs [container\_id]} to get detailed error messages. 
 
-*USRP Connection Problems:
-    \begin{itemize}
-        \item Issue: USRP device not recognized by the host machine.
-        \item Solution: Verify the USRP is properly connected and the correct IP address is configured. Use the command \textit{uhd\_find\_devices} to detect connected USRP devices.
-    \end{itemize}
-    \item Network Configuration Errors:
-    \begin{itemize}
-        \item Issue: No communication between gNB and 5GC.
-        \item Solution: Check IP forwarding and iptables settings. Ensure that the gNB configuration file has the correct IP addresses for the 5GC components.
-    \end{itemize}
-    \item Signal Quality Issues:
-    \begin{itemize}
-        \item Issue: Poor signal quality or no signal detected.
-        \item Solution: Verify antenna connections and ensure they are properly placed. Adjust the transmission power settings in the configuration file.
-    \end{itemize}
-    \item Performance Bottlenecks:
-    \begin{itemize}
-        \item Issue: Suboptimal throughput performance.
-        \item Solution: Monitor CPU and memory usage to identify bottlenecks. Adjust the configuration parameters such as \textit{nb\_tx}, \textit{nb\_rx}, and \textit{max\_rxgain} to optimize performance.
-    \end{itemize}
- 
-\end{enumerate} 
+* USRP Connection Problems:
+   - **Issue**: USRP device not recognized by the host machine.
+   - **Solution**: Verify the USRP is properly connected and the correct IP address is configured. Use the command \textit{uhd\_find\_devices} to detect connected USRP devices.
+
+* Network Configuration Errors:
+   - **Issue**: No communication between gNB and 5GC.
+   - **Solution**: Check IP forwarding and iptables settings. Ensure that the gNB configuration file has the correct IP addresses for the 5GC components.
+
+* Signal Quality Issues:
+   - **Issue**: Poor signal quality or no signal detected.
+   - **Solution**: Verify antenna connections and ensure they are properly placed. Adjust the transmission power settings in the configuration file.
+    
+* Performance Bottlenecks:
+   - **Issue**: Suboptimal throughput performance.
+   - **Solution**: Monitor CPU and memory usage to identify bottlenecks. Adjust the configuration parameters such as \textit{nb\_tx}, \textit{nb\_rx}, and \textit{max\_rxgain} to optimize performance.
+   
