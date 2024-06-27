@@ -99,3 +99,16 @@ In this section, we discuss common issues encountered during the setup and deplo
 * Performance Bottlenecks:
    - **Issue**: Suboptimal throughput performance.
    - **Solution**: Monitor CPU and memory usage to identify bottlenecks. Adjust the configuration parameters such as `nb_tx`, `nb_rx`, and `max_rxgain` to optimize performance.
+ 
+# Citation
+If you use this tutorial, please cite our paper to appear in the Journal of Internet Services and Applications (JISA). Here is a suitable BibTeX entry:
+
+```python
+@inproceedings{OAITuto2024,
+  title = {{Virtualized 5G Tesbed using OpenAirInterface: Tutorial and Benchmarking Tests}},
+  author = {Antonio Campos and Vicente Sousa and Nelson Oliveira and Paulo Eduardo and Paulo Filho and Matheus Dória and Carlos Lima and João Guilherme and Daniel Luna and Iago Rego and Marcelo Fernandes and Augusto Neto},
+  booktitle = {Journal of Internet Services and Applications, 2024},
+  year = {2024}
+}
+```
+
