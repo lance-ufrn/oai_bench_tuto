@@ -103,12 +103,20 @@ In this section, we discuss common issues encountered during the setup and deplo
 # Citation
 If you use this tutorial, please cite our paper to appear in the Journal of Internet Services and Applications (JISA). Here is a suitable BibTeX entry:
 
-```python
-@inproceedings{OAITuto2024,
-  title = {{Virtualized 5G Tesbed using OpenAirInterface: Tutorial and Benchmarking Tests}},
-  author = {Antonio Campos and Vicente Sousa and Nelson Oliveira and Paulo Eduardo and Paulo Filho and Matheus Dória and Carlos Lima and João Guilherme and Daniel Luna and Iago Rego and Marcelo Fernandes and Augusto Neto},
-  booktitle = {Journal of Internet Services and Applications, 2024},
-  year = {2024}
+```bibtex
+@article{Virtualized_5G_2024,
+    title = {Virtualized 5G Testbed using OpenAirInterface: Tutorial and Benchmarking Tests},
+    author = {Dória, Matheus and Sousa, Vicente and Campos, Antonio and Oliveira, Nelson and
+              Eduardo, Paulo and Filho, Paulo and Lima, Carlos and Guilherme, João and
+              Luna, Daniel and Rego, Iago and Fernandes, Marcelo and Neto, Augusto},
+    journal = {Journal of Internet Services and Applications},
+    volume = {15},
+    number = {1},
+    pages = {523–535},
+    year = {2024},
+    month = {Oct.},
+    url = {https://journals-sol.sbc.org.br/index.php/jisa/article/view/4454},
+    DOI = {10.5753/jisa.2024.4454}
 }
 ```
 
